@@ -1,0 +1,53 @@
+/* Import the Roboto font from Google Fonts. */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Set the box-sizing property to border-box for all elements. */
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body element. */
+body {
+  background-color: #eee;
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+/* Style the heading element. */
+h1 {
+  margin: 10px;
+}
+
+/* Style the box elements. */
+.box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  margin: 10px;
+  box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+  transform: translateX(400%);
+  transition: transform 0.5s ease;
+}
+
+/* Style even-numbered box elements. */
+.box:nth-of-type(even) {
+  transform: translateX(-400%);
+}
+
+/* Style box elements with the show class applied. */
+.box.show {
+  transform: translateX(0);
+}
+
+/* Style images inside of box elements. */
+.box img {
+  width: 100%;
+  background-size: cover;
+}
